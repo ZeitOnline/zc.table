@@ -25,11 +25,10 @@ def read(*rnames):
 
 setup(
     name="zc.table",
-    version='1.1+importlib',
+    version='1.1+importlib.1',
     url="https://github.com/zopefoundation/zc.table/",
     python_requires='>=3.9',
     install_requires=[
-        'zc.resourcelibrary >= 0.6',
         'zope.browserpage >= 3.10',
         'zope.formlib >= 4',
         'zope.cachedescriptors',
