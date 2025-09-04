@@ -15,7 +15,6 @@
 """
 import os
 
-from setuptools import find_packages
 from setuptools import setup
 
 
@@ -26,11 +25,10 @@ def read(*rnames):
 
 setup(
     name="zc.table",
-    version='1.1.dev0',
+    version='1.1+importlib',
     url="https://github.com/zopefoundation/zc.table/",
     python_requires='>=3.9',
     install_requires=[
-        'setuptools',
         'zc.resourcelibrary >= 0.6',
         'zope.browserpage >= 3.10',
         'zope.formlib >= 4',
@@ -45,9 +43,6 @@ setup(
         test=['zope.testing',
               'zope.testrunner',
               'zope.publisher']),
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
-    namespace_packages=['zc'],
     package_data={
         '': ['*.txt', '*.rst', '*.zcml', '*.gif', '*.js'],
         'zc.table': ['resources/*', '*.pt'],
